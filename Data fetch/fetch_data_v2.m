@@ -1,3 +1,4 @@
+
 % Created 2018-11-15, Updated 2018-11-15
 % Author: Siqing Ma
 % Get the time, channel and status
@@ -93,8 +94,8 @@ for i = 1 : length(time_row)
     end     
 end
 
-T = repmat(time_row, 1, 85);
+T = repmat(time_row, 1, size(X,2));
 T = T.*X;
 T = abs(T);
-
+surfc(X);
 RHO = corr(X);
